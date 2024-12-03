@@ -5,8 +5,9 @@ let string = ''
 
 buttons.forEach(e =>{
     e.addEventListener('click', (b)=>{
+        // console.log(string)
         if(b.target.innerText == '='){
-            string = String(eval(string))
+            string = String(Math.round(eval(string)*10000)/10000)
             inputBox.value = string;
         }
         else if(b.target.innerText == 'AC'){
